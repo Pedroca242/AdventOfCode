@@ -1,1 +1,1 @@
-Minhas soluções dos desafios do Advent of Code.
+Minhas soluções dos desafios do Advent of Code. (Aprendendo a usar git)
