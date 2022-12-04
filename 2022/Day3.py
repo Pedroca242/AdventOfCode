@@ -1,9 +1,6 @@
 
 def partone(file):
-    minusculos = 'abcdefghijklmnopqrstuvwxyz'
-    maiusculos = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
     prio = 0
-
     for f in file:
         letras = str(f)
         primeira = letras[0:int(len(letras)/2)]
@@ -17,16 +14,14 @@ def partone(file):
                 else:
                     pass
         if semelhantes[0].isupper():
-            prio += (maiusculos.index(semelhantes[0]) + 27)
+            prio += (ord(semelhantes[0])-ord('A') + 27)
         else:
-            prio += (minusculos.index(semelhantes[0]) + 1)
+            prio += (ord(semelhantes[0])-ord('a') + 1)
 
     return prio
 
 def parttwo(file):
     content = file.readlines()
-    minusculos = 'abcdefghijklmnopqrstuvwxyz'
-    maiusculos = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
     prio = 0
 
     for i in range(2,len(content),3):
@@ -44,14 +39,13 @@ def parttwo(file):
                         pass
 
         if semelhantes[0].isupper():
-            prio += (maiusculos.index(semelhantes[0]) + 27)
+            prio += (ord(semelhantes[0]) - ord('A') + 27)
         else:
-            prio += (minusculos.index(semelhantes[0]) + 1)
+            prio += (ord(semelhantes[0]) - ord('a') + 1)
 
     return prio
 
-
-file = open('Day3Input')
+file = open('2022/Day3Input')
 print(partone(file))
-file = open('Day3Input')
+file = open('2022/Day3Input')
 print(parttwo(file))

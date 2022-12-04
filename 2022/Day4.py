@@ -1,4 +1,3 @@
-
 def result(file):
     count = 0
     for f in file:
@@ -14,7 +13,6 @@ def result(file):
 
         if len(check) != 0:
             count += 1
-
     return count
 
 file = open('Day4Input.txt')
