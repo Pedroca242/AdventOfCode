@@ -1,3 +1,4 @@
+file = open('Day1Input')
 
 def achar_maior(file):
     valores = []
@@ -15,8 +16,6 @@ def achar_maior(file):
             maiores[maiores.index(min(maiores))] = atual
 
     return sum(maiores)
-
-file = open('Day1Input')
 
 
 print(achar_maior(file))
