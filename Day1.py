@@ -18,6 +18,7 @@ def achar_maior(file):
 
 file = open('Day1Input')
 
+
 print(achar_maior(file))
 
 
